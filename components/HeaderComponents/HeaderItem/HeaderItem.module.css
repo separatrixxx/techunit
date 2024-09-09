@@ -1,0 +1,32 @@
+.headerItem {
+	cursor: pointer;
+	transition-duration: 300ms;
+
+	color: var(--white) !important;
+
+	font-weight: 500;
+}
+
+.headerItem:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--light) !important;
+}
+
+@media (min-width: 1024px) {
+	.headerItem:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--light) !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.headerItem {
+		margin: 10px 0 10px 0 !important;
+	}
+
+	.headerItem:first-child {
+		margin-top: 20px !important;
+	}
+}
