@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 
 export const ContactsBlock = (): JSX.Element => {
-    const router = useRouter()
+    const router = useRouter();
 
     return (
         <div id="contacts" className={styles.contactsBlock}>

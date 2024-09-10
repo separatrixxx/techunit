@@ -2,7 +2,6 @@
 	display: grid;
 
 	width: calc(100% - 80px);
-	margin-top: 94px;
 	padding: 60px 40px;
 
 	background: var(--light);
@@ -43,11 +42,5 @@
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		filter: brightness(0.9);
-	}
-}
-
-@media (max-width: 1024px) {
-	.contactsBlock {
-		margin-top: 60px;
 	}
 }

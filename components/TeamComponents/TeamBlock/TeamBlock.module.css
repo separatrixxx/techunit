@@ -1,0 +1,38 @@
+.teamBlock {
+	display: grid;
+
+	justify-items: left;
+	gap: 20px;
+}
+
+.teamDiv {
+	display: grid;
+	grid-template-columns: repeat(4, auto);
+	gap: 40px;
+
+	margin-top: 20px;
+}
+
+.teamSubtitle {
+	margin-top: 20px;
+
+	font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+	.teamDiv {
+		gap: 30px;
+	}
+}
+
+@media (max-width: 700px) {
+	.teamDiv {
+		grid-template-columns: repeat(2, auto);
+	}
+}
+
+@media (max-width: 300px) {
+	.teamDiv {
+		grid-template-columns: auto;
+	}
+}

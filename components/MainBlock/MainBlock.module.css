@@ -1,0 +1,29 @@
+.mainBlock {
+	display: grid;
+	align-items: center;
+
+	width: calc(100% - 80px);
+	height: 300px;
+	margin-top: 74px;
+	padding: 60px 40px;
+
+	background: var(--light);
+	justify-items: left;
+	gap: 20px;
+}
+
+.mainTitle {
+	font-weight: 600;
+}
+
+.mainSubtitle {
+	margin-top: -200px;
+
+	font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+	.mainBlock {
+		margin-top: 40px;
+	}
+}

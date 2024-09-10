@@ -1,0 +1,44 @@
+.brandItem {
+	display: grid;
+	justify-items: center;
+	gap: 10px;
+}
+
+.brandPhoto {
+	display: grid;
+	overflow: hidden;
+	align-items: center;
+
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+
+	border-radius: 9999px;
+	background: var(--primary);
+	justify-items: center;
+}
+
+.brandName {
+	font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+	.brandPhoto {
+		width: 120px;
+		height: 120px;
+	}
+}
+
+@media (max-width: 700px) {
+	.brandPhoto {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+@media (max-width: 580px) {
+	.brandPhoto {
+		width: 100px;
+		height: 100px;
+	}
+}

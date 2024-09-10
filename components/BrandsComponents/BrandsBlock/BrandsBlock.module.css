@@ -1,0 +1,22 @@
+.brandsBlock {
+	display: grid;
+
+	width: calc(100% - 80px);
+	padding: 60px 40px;
+
+	background: var(--light);
+	justify-items: left;
+	gap: 20px;
+}
+
+.brandsTitle {
+	font-weight: 600;
+}
+
+.brandsDiv {
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 40px;
+
+	margin-top: 20px;
+}

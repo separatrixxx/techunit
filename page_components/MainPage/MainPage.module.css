@@ -3,4 +3,17 @@
 
 	width: 100%;
 	justify-items: center;
+	gap: 40px;
+}
+
+@media (max-width: 1024px) {
+	.wrapper {
+		gap: 30px;
+	}
+}
+
+@media (max-width: 580px) {
+	.wrapper {
+		gap: 20px;
+	}
 }

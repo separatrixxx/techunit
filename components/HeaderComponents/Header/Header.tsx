@@ -52,8 +52,6 @@ export const Header = (): JSX.Element => {
         setElement4(document.getElementById('contacts'));
 	}, []);
 
-    const scrollIntoView = require('scroll-into-view');
-
     return (
         <header className={styles.header}>
             <Link href='/' className={styles.logo}><Logo /></Link>
