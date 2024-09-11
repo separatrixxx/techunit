@@ -3,22 +3,22 @@ import { BrandsInterface } from "../interfaces/brands.interface";
 
 export function getBrands(): BrandsInterface[] {
     const brand1: BrandsInterface = {
-        photo: '',
+        photo: '1',
         name: 'TechGadget',
     }
 
     const brand2: BrandsInterface = {
-        photo: '',
+        photo: '2',
         name: 'SmartHome',
     }
 
     const brand3: BrandsInterface = {
-        photo: '',
+        photo: '3',
         name: 'DataSecure',
     }
 
     const brand4: BrandsInterface = {
-        photo: '',
+        photo: '4',
         name: 'CloudConnect',
     }
 

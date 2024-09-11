@@ -1,46 +1,88 @@
 .contactsBlock {
+	position: relative;
+
 	display: grid;
 
-	width: calc(100% - 80px);
-	padding: 60px 40px;
+	width: calc(100% - 120px);
+	padding: 60px;
 
-	background: var(--light);
-	justify-items: left;
+	background: var(--dark);
 	gap: 20px;
+	justify-items: left;
 }
 
-.contactsTitle {
-	font-weight: 600;
+.plane {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	height: 200px;
+	fill: var(--white);
 }
 
-.contactsSubtitle {
-	margin-top: 20px;
+.emailDiv {
+	display: grid;
+	gap: 10px;
+}
 
-	font-weight: 500;
+.contactsBlock > h1 {
+	color: var(--white);
 }
 
 .socialMediaDiv {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 40px;
+
+	margin-top: 20px;
 }
 
 .socialMediaDiv > a {
-	transition-duration: 300ms;
+	transition-duration: 500ms;
 
-	color: var(--dark) !important;
+	color: var(--white) !important;
 }
 
 .socialMediaDiv > a:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	filter: brightness(0.9);
+	color: var(--light) !important;
 }
 
 @media (min-width: 1024px) {
 	.socialMediaDiv > a:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		filter: brightness(0.9);
+		color: var(--light) !important;
+	}
+}
+
+@media (max-width: 1024px) {
+	.contactsBlock {
+		width: calc(100% - 80px);
+		padding: 60px 40px;
+	}
+}
+
+@media (max-width: 580px) {
+	.contactsBlock {
+		width: calc(100% - 60px);
+		padding: 60px 30px;
+	}
+
+	.plane {
+		height: 100px;
+	}
+}
+
+@media (max-width: 400px) {
+	.plane {
+		height: 70px;
+	}
+}
+
+@media (max-width: 300px) {
+	.plane {
+		display: none;
 	}
 }

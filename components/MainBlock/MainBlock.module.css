@@ -2,28 +2,73 @@
 	display: grid;
 	align-items: center;
 
-	width: calc(100% - 80px);
-	height: 300px;
+	width: calc(100% - 120px);
+	height: calc(100vh - 194px);
 	margin-top: 74px;
-	padding: 60px 40px;
+	padding: 60px;
 
 	background: var(--light);
-	justify-items: left;
+	justify-items: center;
 	gap: 20px;
 }
 
 .mainTitle {
-	font-weight: 600;
+	color: var(--white) !important;
 }
 
-.mainSubtitle {
-	margin-top: -200px;
+@keyframes bounce {
+	0%,
+	100% {
+		transform: translateY(-25%);
+		animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+	}
 
-	font-weight: 500;
+	50% {
+		transform: translateY(0);
+		animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+	}
+}
+
+.arrow {
+	position: absolute;
+	bottom: 0;
+
+	margin-bottom: 40px;
+
+	cursor: pointer;
+	transition-duration: 500ms !important;
+	animation: bounce 1s infinite;
+
+	color: var(--white) !important;
+}
+
+.arrow:active {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--primary) !important;
+}
+
+@media (min-width: 1024px) {
+	.arrow:hover {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--primary) !important;
+	}
 }
 
 @media (max-width: 1024px) {
 	.mainBlock {
+		width: calc(100% - 80px);
+		height: calc(100vh - 120px);
 		margin-top: 40px;
+		padding: 60px 40px;
+	}
+}
+
+@media (max-width: 580px) {
+	.mainBlock {
+		width: calc(100% - 60px);
+		height: calc(100vh - 100px);
+		padding: 60px 30px;
 	}
 }

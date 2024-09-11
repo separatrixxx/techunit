@@ -25,7 +25,7 @@ export const LocaleChange = (): JSX.Element => {
     return (
         <>
             <Htag tag='m' className={styles.lang} onClick={() => setActive(true)}>
-                {setLocale(router.locale).language}
+                {setLocale(router.locale).lang}
             </Htag>
             <Modal active={active} setActive={setActive}>
                 <div className={styles.blockLanguages}>

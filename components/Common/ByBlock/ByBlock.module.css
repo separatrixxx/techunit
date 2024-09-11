@@ -8,9 +8,9 @@
 }
 
 .byBanana {
-	transition-duration: 300ms;
+	transition-duration: 500ms;
 
-	color: var(--darkLight);
+	color: var(--dark) !important;
 }
 
 .darkColor {

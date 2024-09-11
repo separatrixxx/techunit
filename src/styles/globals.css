@@ -10,7 +10,7 @@ body {
 
 	background: var(--white);
 
-	font-family: 'Roboto', sans-serif;
+	font-family: var(--font-family);
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 	-webkit-tap-highlight-color: transparent;
 }
@@ -48,12 +48,12 @@ a {
 }
 
 :root {
-	--primary: #000;
+	--primary: #243C62;
 	--white: #FFF;
 	--dark: #1F1F1F;
-	--light: #DDD;
-	--darkLight: #A3A3A3;
+	--light: #9ABEE0;
+	--darkLight: #5D87A9;
 	--error: #FF1500;
 	--banana: #FFC803;
-	--font-family: 'Roboto', sans-serif;
+	--font-family: 'Metropolis', sans-serif;
 }

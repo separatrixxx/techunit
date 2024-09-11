@@ -2,6 +2,8 @@
 	display: grid;
 	justify-items: center;
 	gap: 10px;
+
+	cursor: pointer;
 }
 
 .brandPhoto {
@@ -13,13 +15,29 @@
 	height: 200px;
 	margin-bottom: 10px;
 
-	border-radius: 9999px;
+	transition-duration: 500ms;
+
+	border-radius: 0;
 	background: var(--primary);
 	justify-items: center;
 }
 
+.brandItem:active > .brandPhoto {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	border-radius: 200px;
+}
+
 .brandName {
 	font-weight: 500;
+}
+
+@media (min-width: 1024px) {
+	.brandItem:hover > .brandPhoto {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		border-radius: 200px;
+	}
 }
 
 @media (max-width: 1024px) {

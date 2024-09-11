@@ -11,7 +11,7 @@ export const TeamBlock = (): JSX.Element => {
     
     return (
         <div className={styles.teamBlock}>
-            <Htag tag='m' className={styles.teamSubtitle}>
+            <Htag tag='xl' className={styles.teamSubtitle}>
                 {setLocale(router.locale).our_team}
             </Htag>
             <div className={styles.teamDiv}>

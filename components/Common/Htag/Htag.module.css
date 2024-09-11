@@ -7,121 +7,111 @@
 	width: fit-content;
 	margin: 0;
 
-	color: var(--textDark);
+	color: var(--dark);
 }
 
 .xxxl {
-	font-size: 80px;
-	font-weight: 700;
+	font-size: 200px;
+	font-weight: 900 !important;
 	font-style: normal;
-	line-height: normal;
 }
 
 .xxl {
 	font-size: 60px;
-	font-weight: 700;
+	font-weight: 900 !important;
 	font-style: normal;
-	line-height: normal;
 }
 
 .xl {
 	font-size: 50px;
-	font-weight: 400;
+	font-weight: 900 !important;
 	font-style: normal;
 }
 
 .l {
-	font-size: 40px;
-	font-weight: 400;
+	font-size: 30px;
+	font-weight: 500 !important;
 	font-style: normal;
 }
 
 .m {
-	font-size: 26px;
-	font-weight: 400;
+	font-size: 20px;
+	font-weight: 500;
 	font-style: normal;
 }
 
 .s {
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 400;
 	font-style: normal;
 }
 
+@media (max-width: 1200px) {
+	.xxxl {
+		font-size: 160px;
+	}
+}
+
 @media (max-width: 1024px) {
 	.xxxl {
-		font-size: 60px;
+		font-size: 120px;
 	}
 
 	.xxl {
-		font-size: 40px;
+		font-size: 52px;
 	}
 
 	.xl {
-		font-size: 30px;
+		font-size: 44px;
 	}
 
 	.l {
-		font-size: 20px;
+		font-size: 24px;
 	}
 
 	.m {
-		font-size: 22px;
+		font-size: 18px;
 	}
 
 	.s {
-		font-size: 16px;
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 750px) {
+	.xxxl {
+		font-size: 80px;
 	}
 }
 
 @media (max-width: 580px) {
 	.xxxl {
-		font-size: 50px;
+		font-size: 60px;
 	}
 
 	.xxl {
-		font-size: 30px;
+		font-size: 44px;
 	}
 
 	.xl {
-		font-size: 20px;
+		font-size: 36px;
 	}
 
 	.l {
-		font-size: 17px;
+		font-size: 20px;
 	}
 
 	.m {
-		font-size: 12px;
+		font-size: 16px;
 	}
 
 	.s {
-		font-size: 9px;
+		font-size: 12px;
 	}
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
 	.xxxl {
 		font-size: 40px;
-	}
-
-	.xxl {
-		font-size: 20px;
-	}
-
-	.xl {
-		font-size: 15px;
-	}
-
-	.l {
-		font-size: 12px;
-	}
-
-	.m {
-		font-size: 7px;
-	}
-
-	.s {
-		font-size: 6px;
 	}
 }

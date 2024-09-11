@@ -2,7 +2,6 @@ import styles from './CareerBlock.module.css';
 import { useRouter } from 'next/router';
 import { Htag } from '../Common/Htag/Htag'
 import { setLocale } from '../../helpers/locale.helper';
-import ReactMarkdown from 'react-markdown';
 
 
 export const CareerBlock = (): JSX.Element => {
@@ -15,9 +14,9 @@ export const CareerBlock = (): JSX.Element => {
             <Htag tag='xl' className={styles.careerTitle}>
                 {setLocale(router.locale).join_our_team}
             </Htag>
-            <ReactMarkdown>
+            <Htag tag='l' className={styles.careerText}>
                 {text}
-            </ReactMarkdown>
+            </Htag>
         </div>
     );
 };

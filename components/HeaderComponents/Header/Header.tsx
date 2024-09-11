@@ -8,6 +8,7 @@ import { BurgerMenu } from '../BurgerMenu/BurgenMenu';
 import { setLocale } from '../../../helpers/locale.helper';
 import { useRouter } from 'next/router';
 import { HeaderItem } from '../HeaderItem/HeaderItem';
+import { LocaleChange } from '../../Common/LocaleChange/LocaleChange';
 
 
 export const Header = (): JSX.Element => {
@@ -46,11 +47,11 @@ export const Header = (): JSX.Element => {
     const [element4, setElement4] = useState<Element | null>(null);
 
     useEffect(() => {
-		setElement1(document.getElementById('about'));
+        setElement1(document.getElementById('about'));
         setElement2(document.getElementById('brands'));
         setElement3(document.getElementById('career'));
         setElement4(document.getElementById('contacts'));
-	}, []);
+    }, []);
 
     return (
         <header className={styles.header}>
@@ -65,7 +66,10 @@ export const Header = (): JSX.Element => {
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).career} element={element3} />
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).contact_us} element={element4} />
             </motion.div>
-            <BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
+            <div className={styles.headerButtonsDiv}>
+                <LocaleChange />
+                <BurgerMenu open={open} setOpen={setOpen} setHidden={setHidden} />
+            </div>
         </header>
     );
 };

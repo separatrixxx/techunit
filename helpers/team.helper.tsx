@@ -3,25 +3,25 @@ import { TeamInterface } from "../interfaces/team.interface";
 
 export function getTeam(): TeamInterface[] {
     const team1: TeamInterface = {
-        photo: '',
+        photo: '1',
         name: 'John Doe',
         text: 'CEO',
     }
 
     const team2: TeamInterface = {
-        photo: '',
+        photo: '2',
         name: 'Jane Smith',
         text: 'CTO',
     }
 
     const team3: TeamInterface = {
-        photo: '',
+        photo: '3',
         name: 'Mike Johnson',
         text: 'Head of Design',
     }
 
     const team4: TeamInterface = {
-        photo: '',
+        photo: '4',
         name: 'Sarah Williams',
         text: 'Head of Marketing',
     }

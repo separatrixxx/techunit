@@ -1,8 +1,8 @@
 .careerBlock {
 	display: grid;
 
-	width: calc(100% - 80px);
-	padding: 60px 40px;
+	width: calc(100% - 120px);
+	padding: 60px;
 
 	background: var(--light);
 	justify-items: left;
@@ -10,5 +10,33 @@
 }
 
 .careerTitle {
-	font-weight: 600;
+	margin-bottom: 20px;
+
+	color: var(--white);
+}
+
+.careerText {
+	width: 50%;
+}
+
+@media (max-width: 1024px) {
+	.careerBlock {
+		width: calc(100% - 80px);
+		padding: 60px 40px;
+	}
+
+	.careerText {
+		width: 70%;
+	}
+}
+
+@media (max-width: 580px) {
+	.careerBlock {
+		width: calc(100% - 60px);
+		padding: 60px 30px;
+	}
+
+	.careerText {
+		width: 100%;
+	}
 }

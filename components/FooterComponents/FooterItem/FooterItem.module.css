@@ -1,4 +1,4 @@
-.headerItem {
+.footerItem {
 	display: grid;
 
 	cursor: pointer;
@@ -9,18 +9,14 @@
 	font-weight: 500;
 }
 
-.hidden {
-	display: none;
-}
-
-.headerItem:active {
+.footerItem:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	color: var(--darkLight) !important;
 }
 
 @media (min-width: 1024px) {
-	.headerItem:hover {
+	.footerItem:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		color: var(--darkLight) !important;
@@ -28,11 +24,7 @@
 }
 
 @media (max-width: 1024px) {
-	.headerItem {
+	.footerItem {
 		margin: 10px 0 10px 0 !important;
-	}
-
-	.headerItem:first-child {
-		margin-top: 20px !important;
 	}
 }

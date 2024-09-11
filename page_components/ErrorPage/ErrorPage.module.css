@@ -6,12 +6,12 @@
 	width: 100%;
 	height: 100vh;
 
-	transition-duration: 300ms;
+	transition-duration: 500ms;
 }
 
 .errorText {
 	cursor: pointer;
-	transition-duration: 300ms;
+	transition-duration: 500ms;
 }
 
 .errorText:active {

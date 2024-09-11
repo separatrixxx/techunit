@@ -1,14 +1,34 @@
 .aboutBlock {
 	display: grid;
 
-	width: calc(100% - 80px);
-	padding: 60px 40px;
+	width: calc(100% - 120px);
+	padding: 50px 60px;
 
-	background: var(--light);
-	justify-items: left;
-	gap: 20px;
+	background: var(--white);
+	justify-items: center;
+	gap: 40px;
 }
 
-.aboutTitle {
-	font-weight: 600;
+.aboutText {
+	width: 70%;
+
+	text-align: center;
+}
+
+@media (max-width: 1024px) {
+	.aboutBlock {
+		width: calc(100% - 80px);
+		padding: 40px;
+		gap: 30px;
+	}
+
+	.aboutText {
+		width: 80%;
+	}
+}
+
+@media (max-width: 580px) {
+	.aboutText {
+		width: 100%;
+	}
 }

@@ -5,6 +5,7 @@ import { Htag } from '../Common/Htag/Htag';
 import { useRouter } from 'next/router';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
 import Link from 'next/link';
+import Plane from './plane.svg';
 
 
 export const ContactsBlock = (): JSX.Element => {
@@ -13,40 +14,29 @@ export const ContactsBlock = (): JSX.Element => {
     return (
         <div id="contacts" className={styles.contactsBlock}>
             <Htag tag='xl' className={styles.contactsTitle}>
-                {setLocale(router.locale).contact_us}
-            </Htag>
-            <Htag tag='m' className={styles.contactsSubtitle}>
                 {setLocale(router.locale).get_in_touch}
             </Htag>
-            <Htag tag='s'>
+            <Htag tag='m'>
                 {getContacts().email}
             </Htag>
-            <Htag tag='s'>
+            <Htag tag='m'>
                 {getContacts().phone}
             </Htag>
-            <Htag tag='s'>
+            <Htag tag='m'>
                 {getContacts().address}
-            </Htag>
-            <Htag tag='m' className={styles.contactsSubtitle}>
-                {setLocale(router.locale).follow_us}
             </Htag>
             <div className={styles.socialMediaDiv}>
                 <Link href='' target='_blank'>
-                    <Htag tag='s'>
-                        <Facebook size={32} />
-                    </Htag>
+                    <Facebook size={32} />
                 </Link>
                 <Link href='' target='_blank'>
-                    <Htag tag='s'>
-                        <Instagram size={32} />
-                    </Htag>
+                    <Instagram size={32} />
                 </Link>
                 <Link href='' target='_blank'>
-                    <Htag tag='s'>
-                        <Twitter size={32} />
-                    </Htag>
+                    <Twitter size={32} />
                 </Link>
             </div>
+            <Plane className={styles.plane} />
         </div>
     );
 };
