@@ -8,11 +8,12 @@
 	padding: 60px;
 
 	background: var(--light);
-	justify-items: center;
+	justify-items: center !important;
 	gap: 20px;
 }
 
 .mainTitle {
+	text-align: center;
 	color: var(--white) !important;
 }
 

@@ -9,6 +9,10 @@
 	gap: 40px;
 }
 
+.aboutTitle {
+	text-align: center;
+}
+
 .aboutText {
 	width: 70%;
 

@@ -9,6 +9,11 @@
 	gap: 40px;
 }
 
+.brandsTitle {
+	text-align: center;
+
+}
+
 .brandsDiv {
 	display: grid;
 	grid-template-columns: repeat(4, auto);
