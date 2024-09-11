@@ -74,4 +74,8 @@
 		width: calc(100% - 60px);
 		padding: 60px 30px;
 	}
+
+	.arrow {
+		margin-bottom: 60px;
+	}
 }
