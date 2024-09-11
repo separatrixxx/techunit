@@ -1,4 +1,6 @@
 .mainBlock {
+	position: relative;
+
 	display: grid;
 	align-items: center;
 
@@ -14,6 +16,7 @@
 
 .mainTitle {
 	text-align: center;
+
 	color: var(--white) !important;
 }
 
@@ -60,8 +63,8 @@
 @media (max-width: 1024px) {
 	.mainBlock {
 		width: calc(100% - 80px);
-		height: calc(100vh - 120px);
-		margin-top: 40px;
+		height: calc(100vh - 183.2px);
+		margin-top: 63.2px !important;
 		padding: 60px 40px;
 	}
 }
@@ -69,7 +72,6 @@
 @media (max-width: 580px) {
 	.mainBlock {
 		width: calc(100% - 60px);
-		height: calc(100vh - 100px);
 		padding: 60px 30px;
 	}
 }
