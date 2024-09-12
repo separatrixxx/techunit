@@ -3,8 +3,9 @@ import { ContactsInterface } from "../interfaces/contacts.interface";
 
 export function getContacts(): ContactsInterface {
     return {
-        email: 'info@techunit.com',
-        phone: '+1 (123) 456-7890',
-        address: '123 Tech Street, Innovation City, 12345',
+        name: 'TechUnit s.r.o.',
+        email: 'info@techunit.cz',
+        phone: '+420 602 767 789',
+        address: 'Plavnická 560373 81 Kamenný Újezd, Czech Republic',
     };
 }

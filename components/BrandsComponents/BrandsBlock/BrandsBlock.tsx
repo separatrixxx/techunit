@@ -12,6 +12,7 @@ export const BrandsBlock = (): JSX.Element => {
     const router = useRouter();
 
     const brandsTitleRef = useRef<HTMLDivElement>(null);
+    const brandsDivRef = useRef<HTMLHeadingElement>(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -20,8 +21,9 @@ export const BrandsBlock = (): JSX.Element => {
                 gsap.registerPlugin(ScrollTrigger);
 
                 const brandsTitle = brandsTitleRef.current;
+                const brandsDiv = brandsDivRef.current;
 
-                if (brandsTitle) {
+                if (brandsTitle && brandsDiv) {
                     const letters = brandsTitle.querySelectorAll('.letter');
                     const tl = gsap.timeline({
                         scrollTrigger: {
@@ -34,12 +36,18 @@ export const BrandsBlock = (): JSX.Element => {
                         { opacity: 0, rotateY: 90 },
                         { opacity: 1, rotateY: 0, duration: 1, stagger: 0.05, ease: "power2.out" }
                     );
+
+                    tl.fromTo(brandsDiv,
+                        { opacity: 0 },
+                        { opacity: 1, duration: 1, ease: "power2.out" },
+                        0.5
+                    )
                 }
             });
         }
     }, []);
 
-    const titleText = setLocale(router.locale).our_brands.toUpperCase();
+    const titleText = setLocale(router.locale).our_partners.toUpperCase();
     const titleLetters = titleText.split('').map((letter, index) => (
         <span key={index} className="letter">
             {letter}
@@ -51,7 +59,7 @@ export const BrandsBlock = (): JSX.Element => {
             <Htag tag='xxxl' className={styles.brandsTitle} ref={brandsTitleRef}>
                 {titleLetters}
             </Htag>
-            <div className={styles.brandsDiv}>
+            <div className={styles.brandsDiv} ref={brandsDivRef}>
                 {getBrands().map(b => (
                     <BrandItem key={b.photo} photo={b.photo} name={b.name} />
                 ))}

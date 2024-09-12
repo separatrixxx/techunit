@@ -11,9 +11,9 @@ function Main(): JSX.Element {
     <>
       <Head>
         <title>{setLocale(router.locale).techunit}</title>
-        <meta name='description' content={setLocale(router.locale).techunit} />
+        <meta name='description' content={setLocale(router.locale).about_text} />
         <meta property='og:title' content={setLocale(router.locale).techunit} />
-        <meta name='og:description' content={setLocale(router.locale).techunit} />
+        <meta name='og:description' content={setLocale(router.locale).about_text} />
         <meta charSet="utf-8" />
       </Head>
       <MainPage />

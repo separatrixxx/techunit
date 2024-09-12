@@ -6,7 +6,7 @@ export const en = {
     error404: "Page not found, 404 error",
     error500: "Server failure, error 500",
     about_company: "About Company",
-    our_brands: "Our Brands",
+    our_partners: "Our Partners",
     career: "Career",
     contact_us: "Contact Us",
     get_in_touch: "Get in Touch",
@@ -17,4 +17,6 @@ export const en = {
     all_rights_reserved: "All rights reserved",
     welcome_to_techunit: "Welcome to TechUnit",
     slogan: "Innovating the future of technology, one unit at a time",
+    about_text: "TechUnit is a project management company in field of medical devices, food supplements and skincare.  Launching your own brand in the health care field? Want to grow sales? Our team of specialists will be happy to evaluate your project and product, to find suitable investor, to prepare an action plan and to erase the horizons of possibilities, playing with you in the same team. Feel free to explain us your business ideas today!",
+    career_text: "Have you worked in pharmaceutical or cosmoceutical industry? Looking for a job? Write us today!",
 };

@@ -62,7 +62,7 @@ export const Header = (): JSX.Element => {
                 animate={open || width > 1024 ? 'visible' : 'hidden'}
                 style={width > 1024 ? { gridTemplateColumns: `repeat(4, auto)` } : { gridTemplateRows: `repeat(4, auto)` }}>
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).about_company} element={element1} />
-                <HeaderItem hidden={hidden} text={setLocale(router.locale).our_brands} element={element2} />
+                <HeaderItem hidden={hidden} text={setLocale(router.locale).our_partners} element={element2} />
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).career} element={element3} />
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).contact_us} element={element4} />
             </motion.div>

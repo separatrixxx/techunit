@@ -1,10 +1,10 @@
-import { forwardRef } from 'react';
 import { HtagProps } from './Htag.props';
 import styles from './Htag.module.css';
+import { forwardRef } from 'react';
 import cn from 'classnames';
 
 
-export const Htag = forwardRef<HTMLHeadingElement, HtagProps>(({ tag, children, className, onClick }, ref) => {
+export const Htag = forwardRef<HTMLHeadingElement, HtagProps>(({ tag, children, className, onClick }, ref): JSX.Element => {
 	switch (tag) {
 		case 'xxxl':
 			return <h1 ref={ref} className={cn(className, styles.xxxl)} onClick={onClick}>{children}</h1>;

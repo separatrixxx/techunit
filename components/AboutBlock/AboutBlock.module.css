@@ -17,6 +17,7 @@
 	width: 70%;
 
 	text-align: center;
+	hyphens: auto;
 }
 
 @media (max-width: 1024px) {

@@ -12,6 +12,7 @@ export const AboutBlock = (): JSX.Element => {
 
     const aboutTitleRef = useRef<HTMLDivElement>(null);
     const aboutTextRef = useRef<HTMLHeadingElement>(null);
+    const aboutTeamBlockRef = useRef<HTMLHeadingElement>(null);
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
@@ -21,8 +22,9 @@ export const AboutBlock = (): JSX.Element => {
 
                 const aboutTitle = aboutTitleRef.current;
                 const aboutText = aboutTextRef.current;
+                const aboutTeamBlock = aboutTeamBlockRef.current;
 
-                if (aboutTitle && aboutText) {
+                if (aboutTitle && aboutText && aboutTeamBlock) {
                     const letters = aboutTitle.querySelectorAll('.letter');
                     const tl = gsap.timeline({
                         scrollTrigger: {
@@ -40,6 +42,10 @@ export const AboutBlock = (): JSX.Element => {
                         { opacity: 0 },
                         { opacity: 1, duration: 1, ease: "power2.out" },
                         0.5
+                    ).fromTo(aboutTeamBlock,
+                        { opacity: 0 },
+                        { opacity: 1, duration: 1, ease: "power2.out" },
+                        0.5
                     );
                 }
             });
@@ -53,17 +59,17 @@ export const AboutBlock = (): JSX.Element => {
         </span>
     ));
 
-    const text = "TechUnit is at the forefront of technological innovation, bringing cutting-edge solutions to businesses and consumers alike. Our commitment to excellence and passion for technology drives us to create products that shape the future. With a diverse portfolio of brands and a team of expert professionals, we're dedicated to pushing the boundaries of what's possible in the tech world.";
-
     return (
         <div id="about" className={styles.aboutBlock}>
             <Htag tag='xxxl' className={styles.aboutTitle} ref={aboutTitleRef}>
                 {titleLetters}
             </Htag>
             <Htag tag='l' className={styles.aboutText} ref={aboutTextRef}>
-                {text}
+                {setLocale(router.locale).about_text}
             </Htag>
-            <TeamBlock />
+            <div ref={aboutTeamBlockRef}>
+                <TeamBlock />
+            </div>
         </div>
     );
 };

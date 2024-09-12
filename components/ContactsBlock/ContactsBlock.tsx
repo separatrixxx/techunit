@@ -3,7 +3,7 @@ import { getContacts } from '../../helpers/contacts.helper';
 import { setLocale } from '../../helpers/locale.helper';
 import { Htag } from '../Common/Htag/Htag';
 import { useRouter } from 'next/router';
-import { Facebook, Instagram, Twitter } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import Plane from './plane.svg';
 
@@ -17,23 +17,24 @@ export const ContactsBlock = (): JSX.Element => {
                 {setLocale(router.locale).get_in_touch}
             </Htag>
             <Htag tag='m'>
-                {getContacts().email}
+                {getContacts().name}
             </Htag>
-            <Htag tag='m'>
-                {getContacts().phone}
-            </Htag>
+            <Link className={styles.contactsLink} href={`mailto:${getContacts().email}`} target='_blank'>
+                <Htag tag='m'>
+                    {getContacts().email}
+                </Htag>
+            </Link>
+            <Link className={styles.contactsLink} href={`tel:${getContacts().phone}`} target='_blank'>
+                <Htag tag='m'>
+                    {getContacts().phone}
+                </Htag>
+            </Link>
             <Htag tag='m'>
                 {getContacts().address}
             </Htag>
             <div className={styles.socialMediaDiv}>
                 <Link href='' target='_blank'>
-                    <Facebook size={32} />
-                </Link>
-                <Link href='' target='_blank'>
-                    <Instagram size={32} />
-                </Link>
-                <Link href='' target='_blank'>
-                    <Twitter size={32} />
+                    <Linkedin size={32} />
                 </Link>
             </div>
             <Plane className={styles.plane} />

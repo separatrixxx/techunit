@@ -56,9 +56,23 @@
 	}
 }
 
-@media (max-width: 580px) {
+@media (max-width: 420px) {
 	.teamPhoto {
-		width: 100px;
-		height: 100px;
+		width: 250px;
+		height: 250px;
+	}
+}
+
+@media (max-width: 330px) {
+	.teamPhoto {
+		width: 150px;
+		height: 150px;
+	}
+}
+
+@media (max-width: 250px) {
+	.teamPhoto {
+		width: 120px;
+		height: 120px;
 	}
 }

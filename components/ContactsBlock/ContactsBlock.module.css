@@ -25,7 +25,14 @@
 	gap: 10px;
 }
 
-.contactsBlock > h1 {
+.contactsLink > h1 {
+	cursor: pointer;
+
+	transition-duration: 500ms;
+}
+
+.contactsBlock > h1,
+.contactsBlock > a > h1 {
 	color: var(--white);
 }
 
@@ -35,6 +42,12 @@
 	gap: 40px;
 
 	margin-top: 20px;
+}
+
+.contactsLink:active > h1 {
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	color: var(--light) !important;
 }
 
 .socialMediaDiv > a {
@@ -50,6 +63,12 @@
 }
 
 @media (min-width: 1024px) {
+	.contactsLink:hover > h1 {
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+		color: var(--light) !important;
+	}
+
 	.socialMediaDiv > a:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 

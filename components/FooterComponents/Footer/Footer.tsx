@@ -27,12 +27,12 @@ export const Footer = (): JSX.Element => {
         <footer className={styles.footer}>
             <div className={styles.footerLinks}>
                 <FooterItem text={setLocale(router.locale).about_company} element={element1} />
-                <FooterItem text={setLocale(router.locale).our_brands} element={element2} />
+                <FooterItem text={setLocale(router.locale).our_partners} element={element2} />
                 <FooterItem text={setLocale(router.locale).career} element={element3} />
                 <FooterItem text={setLocale(router.locale).contact_us} element={element4} />
             </div>
             <Htag tag='s' className={styles.footerText}>
-                {`© ${setFooterYear(2024)} TechUnit. ${setLocale(router.locale).all_rights_reserved}`}
+                {`© ${setFooterYear(2024)} TechUnit s.r.o. ${setLocale(router.locale).all_rights_reserved}`}
             </Htag>
             <ByBlock color='dark' />
         </footer>

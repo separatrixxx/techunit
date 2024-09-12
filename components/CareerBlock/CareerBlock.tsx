@@ -6,8 +6,6 @@ import { setLocale } from '../../helpers/locale.helper';
 
 export const CareerBlock = (): JSX.Element => {
     const router = useRouter();
-
-    const text = "At TechUnit, we're always looking for talented individuals who are passionate about technology and innovation. Join us in shaping the future of tech!";
     
     return (
         <div id="career" className={styles.careerBlock}>
@@ -15,7 +13,7 @@ export const CareerBlock = (): JSX.Element => {
                 {setLocale(router.locale).join_our_team}
             </Htag>
             <Htag tag='l' className={styles.careerText}>
-                {text}
+                {setLocale(router.locale).career_text}
             </Htag>
         </div>
     );

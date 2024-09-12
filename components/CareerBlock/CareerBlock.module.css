@@ -17,6 +17,8 @@
 
 .careerText {
 	width: 50%;
+
+	hyphens: auto;
 }
 
 @media (max-width: 1024px) {
