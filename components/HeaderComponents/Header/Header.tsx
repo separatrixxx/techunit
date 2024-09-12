@@ -1,6 +1,6 @@
 import styles from './Header.module.css';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Logo from './logo.svg';
 import { motion } from 'framer-motion';
 import { useResizeW } from '../../../hooks/useResize';
@@ -10,13 +10,12 @@ import { useRouter } from 'next/router';
 import { HeaderItem } from '../HeaderItem/HeaderItem';
 import { LocaleChange } from '../../Common/LocaleChange/LocaleChange';
 
-
 export const Header = (): JSX.Element => {
-    const router = useRouter()
+    const router = useRouter();
+    const headerRef = useRef<HTMLDivElement | null>(null); // Создаем ref для хедера
 
     const [open, setOpen] = useState<boolean>(false);
     const [hidden, setHidden] = useState<boolean>(false);
-
     const width = useResizeW();
 
     const variants = {
@@ -51,16 +50,34 @@ export const Header = (): JSX.Element => {
         setElement2(document.getElementById('brands'));
         setElement3(document.getElementById('career'));
         setElement4(document.getElementById('contacts'));
+
+        const handleScroll = () => {
+            setOpen(false);
+        };
+
+        const handleClickOutside = (event: MouseEvent) => {
+            if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+                setOpen(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('mousedown', handleClickOutside);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('mousedown', handleClickOutside);
+        };
     }, []);
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} ref={headerRef}>
             <Link href='/' className={styles.logo}><Logo /></Link>
             <motion.div className={styles.headerBlock}
                 variants={variants}
                 initial={open || width > 1024 ? 'visible' : 'hidden'}
                 animate={open || width > 1024 ? 'visible' : 'hidden'}
-                style={width > 1024 ? { gridTemplateColumns: `repeat(4, auto)` } : { gridTemplateRows: `repeat(4, auto)` }}>
+                style={width > 1024 ? { gridTemplateColumns: 'repeat(4, auto)' } : { gridTemplateRows: 'repeat(4, auto)' }}>
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).about_company} element={element1} />
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).our_partners} element={element2} />
                 <HeaderItem hidden={hidden} text={setLocale(router.locale).career} element={element3} />
