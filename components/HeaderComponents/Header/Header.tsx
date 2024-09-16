@@ -12,7 +12,7 @@ import { LocaleChange } from '../../Common/LocaleChange/LocaleChange';
 
 export const Header = (): JSX.Element => {
     const router = useRouter();
-    const headerRef = useRef<HTMLDivElement | null>(null); // Создаем ref для хедера
+    const headerRef = useRef<HTMLDivElement | null>(null);
 
     const [open, setOpen] = useState<boolean>(false);
     const [hidden, setHidden] = useState<boolean>(false);
