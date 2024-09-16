@@ -46,6 +46,8 @@ export const Header = (): JSX.Element => {
     const [element4, setElement4] = useState<Element | null>(null);
 
     useEffect(() => {
+        setHidden(width <= 1024);
+
         setElement1(document.getElementById('about'));
         setElement2(document.getElementById('brands'));
         setElement3(document.getElementById('career'));
@@ -68,7 +70,7 @@ export const Header = (): JSX.Element => {
             window.removeEventListener('scroll', handleScroll);
             window.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
+    }, [width]);
 
     return (
         <header className={styles.header} ref={headerRef}>
