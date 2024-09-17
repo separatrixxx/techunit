@@ -2,7 +2,7 @@
 	display: grid;
 
 	width: calc(100% - 120px);
-	padding: 30px 60px 60px 60px;
+	padding: 60px;
 
 	background: var(--white);
 	justify-items: center;
@@ -15,35 +15,33 @@
 
 .brandsDiv {
 	display: grid;
-	grid-template-columns: repeat(4, auto);
-	gap: 40px;
+	grid-template-columns: auto auto;
+	gap: 0 40px;
 
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 @media (max-width: 1024px) {
 	.brandsBlock {
 		width: calc(100% - 80px);
-		padding: 20px 40px 50px 40px;
+		padding: 40px 40px 50px 40px;
 		gap: 30px;
+	}
+
+	.brandsDiv {
+		gap: 0 20px;
 	}
 }
 
 @media (max-width: 700px) {
 	.brandsDiv {
-		grid-template-columns: repeat(2, auto);
+		grid-template-columns: auto;
 	}
 }
 
 @media (max-width: 580px) {
 	.brandsBlock {
 		width: calc(100% - 60px);
-		padding: 10px 30px 60px 30px;
-	}
-}
-
-@media (max-width: 420px) {
-	.brandsDiv {
-		grid-template-columns: auto;
+		padding: 30px 30px 20px 30px;
 	}
 }

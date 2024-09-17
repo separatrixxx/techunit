@@ -61,7 +61,7 @@ export const BrandsBlock = (): JSX.Element => {
             </Htag>
             <div className={styles.brandsDiv} ref={brandsDivRef}>
                 {getBrands().map(b => (
-                    <BrandItem key={b.photo} photo={b.photo} name={b.name} />
+                    <BrandItem key={b.photo} photo={b.photo} link={b.link} />
                 ))}
             </div>
         </div>
