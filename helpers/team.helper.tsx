@@ -3,27 +3,27 @@ import { TeamInterface } from "../interfaces/team.interface";
 
 export function getTeam(): TeamInterface[] {
     const team1: TeamInterface = {
-        photo: '1',
-        name: 'John Doe',
-        text: 'CEO',
+        photo: '/TeamImg1.webp',
+        name: 'Alex Sim',
+        text: 'Chief Marketing Strategist',
     }
 
     const team2: TeamInterface = {
-        photo: '2',
-        name: 'Jane Smith',
-        text: 'CTO',
+        photo: '/TeamImg2.webp',
+        name: 'Fuwei Shang',
+        text: 'East Asia Import Manager',
     }
 
     const team3: TeamInterface = {
-        photo: '3',
-        name: 'Mike Johnson',
-        text: 'Head of Design',
+        photo: '/TeamImg3.webp',
+        name: 'Dr. Angelo Colombo',
+        text: 'Science & Business Development',
     }
 
     const team4: TeamInterface = {
-        photo: '4',
-        name: 'Sarah Williams',
-        text: 'Head of Marketing',
+        photo: '/TeamImg4.webp',
+        name: 'Vladimír Marahovski',
+        text: 'Project Manager',
     }
 
     return [team1, team2, team3, team4];

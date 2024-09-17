@@ -15,38 +15,40 @@ export const TeamItem = ({ photo, name, text }: TeamItemProps): JSX.Element => {
         const teamItem = teamItemRef.current;
         const teamName = teamNameRef.current;
         const teamText = teamTextRef.current;
-
+    
         if (teamItem && teamName && teamText) {
             gsap.set([teamName, teamText], { opacity: 0, y: -20 });
-
+    
             const onMouseEnter = () => {
                 gsap.killTweensOf([teamName, teamText]);
-                gsap.to(teamName, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" });
-                gsap.to(teamText, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.3 });
+                gsap.to(teamItem.querySelector('.teamPhoto'), { height: 200, marginBottom: 10, duration: 0.5, ease: "power2.out" });
+                gsap.to(teamName, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.3 });
+                gsap.to(teamText, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out", delay: 0.6 });
             };
-
+    
             const onMouseLeave = () => {
                 gsap.killTweensOf([teamName, teamText]);
+                gsap.to(teamItem.querySelector('.teamPhoto'), { height: 300, marginBottom: -50, duration: 0.5, ease: "power2.out" });
                 gsap.to(teamName, { opacity: 0, y: -20, duration: 0.5, ease: "power2.out" });
                 gsap.to(teamText, { opacity: 0, y: -20, duration: 0.5, ease: "power2.out", delay: 0.3 });
             };
-
+    
             teamItem.addEventListener('mouseenter', onMouseEnter);
             teamItem.addEventListener('mouseleave', onMouseLeave);
-
+    
             return () => {
                 teamItem.removeEventListener('mouseenter', onMouseEnter);
                 teamItem.removeEventListener('mouseleave', onMouseLeave);
             };
         }
-    }, []);
+    }, []);    
 
     return (
         <div className={styles.teamItem} ref={teamItemRef}>
             <Image className={styles.teamPhoto} draggable='false'
                 loader={() => photo}
                 src={photo}
-                alt={'team image'}
+                alt={name + ' image'}
                 width={1}
                 height={1}
                 unoptimized={true}

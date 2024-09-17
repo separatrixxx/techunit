@@ -1,9 +1,11 @@
 .teamItem {
 	display: grid;
-	justify-items: center;
-	gap: 10px;
+	overflow: hidden;
+
+	height: 300px;
 
 	cursor: pointer;
+	justify-items: center;
 }
 
 .teamPhoto {
@@ -12,19 +14,22 @@
 	align-items: center;
 
 	width: 200px;
-	height: 200px;
-	margin-bottom: 10px;
+	height: 300px;
+	margin-bottom: -50px;
 
 	transition-duration: 500ms;
 
 	border-radius: 0;
-
 	background: var(--primary);
 	justify-items: center;
 	object-fit: cover;
 }
 
-.teamItem:active > .teamPhoto {
+.teamItem:hover > .teamPhoto {
+	width: 200px;
+	height: 200px;
+	margin-bottom: 10px;
+
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 	border-radius: 200px;
@@ -34,45 +39,104 @@
 	font-weight: 500;
 }
 
-@media (min-width: 1024px) {
-	.teamItem:hover > .teamPhoto {
-		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-		border-radius: 200px;
-	}
-}
-
 @media (max-width: 1024px) {
+	.teamItem {
+		height: 180px;
+	}
+
 	.teamPhoto {
 		width: 120px;
+		height: 180px;
+	}
+
+	.teamItem:hover > .teamPhoto {
+		width: 120px;
 		height: 120px;
+
+		border-radius: 120px;
 	}
 }
 
 @media (max-width: 700px) {
+	.teamItem {
+		height: 225px;
+	}
+
 	.teamPhoto {
 		width: 150px;
+		height: 225px;
+	}
+
+	.teamItem:hover > .teamPhoto {
+		width: 150px;
 		height: 150px;
+
+		border-radius: 150px;
 	}
 }
 
 @media (max-width: 420px) {
+	.teamItem {
+		height: 375px;
+	}
+
 	.teamPhoto {
 		width: 250px;
+		height: 375px;
+	}
+
+	.teamItem:hover > .teamPhoto {
+		width: 250px;
 		height: 250px;
+
+		border-radius: 250px;
+	}
+
+	.teamName {
+		margin-bottom: -25px;
 	}
 }
 
 @media (max-width: 330px) {
+	.teamItem {
+		height: 225px;
+	}
+
 	.teamPhoto {
 		width: 150px;
+		height: 225px;
+	}
+
+	.teamItem:hover > .teamPhoto {
+		width: 150px;
 		height: 150px;
+
+		border-radius: 150px;
+	}
+
+	.teamName {
+		margin-bottom: -10px;
 	}
 }
 
 @media (max-width: 250px) {
+	.teamItem {
+		height: 180px;
+	}
+
 	.teamPhoto {
 		width: 120px;
+		height: 180px;
+	}
+
+	.teamItem:hover > .teamPhoto {
+		width: 120px;
 		height: 120px;
+
+		border-radius: 120px;
+	}
+
+	.teamName {
+		margin-bottom: 0;
 	}
 }
