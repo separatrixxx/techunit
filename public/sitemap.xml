@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 	<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-	<loc>https://techunit.vercel.app/</loc>
+	<loc>https://www.techunit.cz/</loc>
 	<lastmod>2024-09-13T00:08:22+01:00</lastmod>
 	<priority>0.4</priority>
 </url>
 <url>
-	<loc>https://techunit.vercel.app/cz</loc>
+	<loc>https://www.techunit.cz/en</loc>
 	<lastmod>2024-09-13T00:08:22+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>https://techunit.vercel.app/de</loc>
+	<loc>https://www.techunit.cz/de</loc>
 	<lastmod>2024-09-13T00:08:22+01:00</lastmod>
 	<priority>1.0</priority>
 </url>

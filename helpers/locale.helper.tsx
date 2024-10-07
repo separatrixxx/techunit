@@ -7,12 +7,12 @@ type localeType = typeof en | typeof cz | typeof de;
 
 export function setLocale(locale: string | undefined): localeType {
     switch (locale) {
-        case 'cz':
-            return cz;
+        case 'en':
+            return en;
         case 'de':
             return de;
         default:
-            return en;
+            return cz;
     }
 }
 

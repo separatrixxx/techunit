@@ -1,7 +1,7 @@
 module.exports = {
 	i18n: {
 		locales: ['en', 'de', 'cz'],
-		defaultLocale: 'en',
+		defaultLocale: 'cz',
 	},
 	images: {
 		domains: ['https://techunit.vercel.app/'],
