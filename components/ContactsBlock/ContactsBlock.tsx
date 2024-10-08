@@ -19,12 +19,12 @@ export const ContactsBlock = (): JSX.Element => {
             <Htag tag='m'>
                 {getContacts().name}
             </Htag>
-            <Link className={styles.contactsLink} href={`mailto:${getContacts().email}`} target='_blank'>
+            <Link className={styles.contactsLink} href={`mailto:${getContacts().email}`} target='_blank' aria-label='email'>
                 <Htag tag='m'>
                     {getContacts().email}
                 </Htag>
             </Link>
-            <Link className={styles.contactsLink} href={`tel:${getContacts().phone}`} target='_blank'>
+            <Link className={styles.contactsLink} href={`tel:${getContacts().phone}`} target='_blank' aria-label='phone'>
                 <Htag tag='m'>
                     {getContacts().phone}
                 </Htag>
@@ -33,7 +33,7 @@ export const ContactsBlock = (): JSX.Element => {
                 {getContacts().address}
             </Htag>
             <div className={styles.socialMediaDiv}>
-                <Link href='' target='_blank'>
+                <Link href='' target='_blank' aria-label='linkedin'>
                     <Linkedin size={32} />
                 </Link>
             </div>

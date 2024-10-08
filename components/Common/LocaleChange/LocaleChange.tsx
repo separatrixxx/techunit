@@ -30,7 +30,7 @@ export const LocaleChange = (): JSX.Element => {
             <Modal active={active} setActive={setActive}>
                 <div className={styles.blockLanguages}>
                     {languages.map(m => (
-                        <Link key={m.locale} href={router.asPath} locale={m.locale}
+                        <Link key={m.locale} href={router.asPath} locale={m.locale} aria-label={m.locale}
                             onClick={() => setActive(false)}>
                             <Htag tag='l' className={styles.langLink}>{m.language}</Htag>
                         </Link>

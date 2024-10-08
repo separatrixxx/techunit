@@ -7,7 +7,7 @@ import Link from 'next/link';
 export const BrandItem = ({ photo, link }: BrandItemProps): JSX.Element => {
     return (
         <Link href={link} target="_blank" className={styles.brandItem}>
-            <Image className={styles.brandPhoto} draggable='false'
+            <Image className={styles.brandPhoto} draggable='false' aria-label='brand logo'
                 loader={() => photo}
                 src={photo}
                 alt={'brand image'}
