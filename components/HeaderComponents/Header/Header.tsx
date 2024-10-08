@@ -74,7 +74,9 @@ export const Header = (): JSX.Element => {
 
     return (
         <header className={styles.header} ref={headerRef}>
-            <Link href='/' className={styles.logo}><Logo /></Link>
+            <Link href='/' aria-label='logo' className={styles.logo}>
+                <Logo />
+            </Link>
             <motion.div className={styles.headerBlock}
                 variants={variants}
                 initial={open || width > 1024 ? 'visible' : 'hidden'}
