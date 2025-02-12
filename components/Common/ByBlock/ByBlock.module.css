@@ -5,9 +5,10 @@
 	justify-items: center;
 
 	height: fit-content;
+	margin-top: 10px;
 }
 
-.byBanana {
+.bySeparatrix {
 	transition-duration: 500ms;
 
 	color: var(--dark) !important;
@@ -17,16 +18,16 @@
 	color: var(--white);
 }
 
-.byBanana:active {
+.bySeparatrix:active {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-	color: var(--banana);
+	color: var(--primary) !important;
 }
 
 @media (min-width: 1024px) {
-	.byBanana:hover {
+	.bySeparatrix:hover {
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-		color: var(--banana);
+		color: var(--primary) !important;
 	}
 }
